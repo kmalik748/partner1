@@ -99,7 +99,7 @@ function secondReq($uid){
     $err = curl_error($curl);
 
 //    $response = json_decode($response, true);
-    echo $response; die(); exit();
+//    echo $response; die(); exit();
 
     return $response;
 
