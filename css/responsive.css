@@ -1,0 +1,53 @@
+
+
+@media (max-width :1199px) and (min-device-width :992px){
+
+}
+
+
+@media (max-width :991px) and (min-device-width :768px){
+
+
+
+}
+
+
+
+@media (max-width :767px) and (min-device-width :280px){
+ 
+
+
+
+
+}
+
+@media (max-width :991px) and (min-device-width :280px){
+ 
+.header-row {
+    width: 100%;
+}
+.caution {
+    width: 100%;
+}
+
+
+}    
+
+@media (max-width :420px) and (min-device-width :280px){
+    
+.form-flex {
+    width: 100%;
+} 
+.frm-bx {
+    padding: 0px 15px 0px 15px;
+}
+
+
+}
+
+	
+
+
+
+
+
