@@ -130,7 +130,7 @@
                     ?>
 
                 <div class="form-flex">
-                    <h3>Partners Registration</h3>
+                    <h3>Demo Account Creation</h3>
                     <div class="tbs">
                         <ul class="nav nav-tabs">
 <!--                            <li class="nav-item">-->
@@ -145,7 +145,7 @@
                         <div class="tab-content">
                             <div id="home" class="tab-pane active">
                                 <div class="frm-bx">
-                                    <p style="font-style: italic; color: #11bcab;">* With the 'Quick' registration form you are opening a Standard USD Demo account with balance of USD1,000 and leverage 1:500</p>
+                                    <p style="font-style: italic; color: #11bcab;margin-bottom: 3px;justify-content: center;">* With the 'Quick' registration form you are opening a Standard USD Demo account with balance of USD1,000 and leverage 1:500</p>
                                     <form action="post.php" method="get">
                                         <input type="hidden" name="redirect" value="index.php">
                                         <input type="text" class="input" name="step1[firstName]" id="firstname" placeholder="First Name" required>
@@ -1178,18 +1178,18 @@
                                         <input pattern="^[+][0-9]{5,}$" title="+[country prefix code][followed by the phone number]" style="margin-top: 6px;" type="text" class="input" name="step1[phone]" id="phone2" placeholder="Phone Number" required>
                                         <input type="email" class="input" id="email" name="step1[email]" placeholder="Email" required>
                                         <div class="form-group">
-                                            <select class="form-control currencytwo" name="currency" required>
-                                                <option value="">Account Currency</option>
-                                                <option value="USD">USD</option>
-                                                <option value="EUR">EUR</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
                                             <select class="form-control currencytwo" name="type" required>
                                                 <option value="">Account type</option>
                                                 <option value="1">Cent Account</option>
                                                 <option value="2">Standard Account</option>
                                                 <option value="3">Premium Account</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control currencytwo" name="currency" required>
+                                                <option value="">Account Currency</option>
+                                                <option value="USD">USD</option>
+                                                <option value="EUR">EUR</option>
                                             </select>
                                         </div>
                                         <input type="text" class="input" id="email" name="initial" placeholder="Initial Balance" required>
