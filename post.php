@@ -71,7 +71,7 @@ if ($err) {
 function secondReq($uid){
     $curl = curl_init();
 
-    $body = "{\n\"user\": \"".$uid."\",\n\"sid\": \"2\",\n\"groupName\": \"demoBKFXSTDUSD\",\n\"leverage\": \"1500\",\n\"initialBalance\": \"1000\",
+    $body = "{\n\"user\": \"".$uid."\",\n\"sid\": \"2\",\n\"groupName\": \"demoBKFXSTDUSD\",\n\"leverage\": \"500\",\n\"initialBalance\": \"1000\",
     \n\"notifyDisable\": \"false\",\n\"readOnly\": \"false\"}";
 
 //echo $body;

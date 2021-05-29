@@ -1,8 +1,8 @@
 <?php 
-        define('WP_USE_THEMES', true);
-        define('ICL_LANGUAGE_CODE', 'en');
-        require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
-        $sitepress->set_default_language('en');
+//        define('WP_USE_THEMES', true);
+//        define('ICL_LANGUAGE_CODE', 'en');
+//        require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
+//        $sitepress->set_default_language('en');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -145,6 +145,7 @@
                         <div class="tab-content">
                             <div id="home" class="tab-pane active">
                                 <div class="frm-bx">
+                                    <p style="font-style: italic; color: #11bcab;">* With the 'Quick' registration form you are opening a Standard USD Demo account with balance of USD1,000 and leverage 1:500</p>
                                     <form action="post.php" method="get">
                                         <input type="hidden" name="redirect" value="index.php">
                                         <input type="text" class="input" name="step1[firstName]" id="firstname" placeholder="First Name" required>
@@ -653,14 +654,6 @@
                                         </select>
                                         <input pattern="^[+][0-9]{5,}$" title="+[country prefix code][followed by the phone number]" style="margin-top: 6px;" type="text" class="input" name="step1[phone]" id="phone1" placeholder="Phone Number" required>
                                         <input type="email" class="input" id="email" name="step1[email]" placeholder="Email" required>
-                                        <div class="check">
-                                            <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_2]" required>
-                                            <label for="accept">
-                                                <p>
-                                                    By clicking continue you agree to this <a href="http://bkfx.io/wp-content/uploads/2021/Iron-Campaign.pdf" target="_blank">Partners Agreement</a>
-                                                </p>
-                                            </label>
-                                        </div>
                                         <div class="check">
                                             <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_1]" required>
                                             <label for="accept">
@@ -1186,20 +1179,35 @@
                                         <input type="email" class="input" id="email" name="step1[email]" placeholder="Email" required>
                                         <div class="form-group">
                                             <select class="form-control currencytwo" name="currency" required>
-                                                <option value="">Wallet currency</option>
+                                                <option value="">Account Currency</option>
                                                 <option value="USD">USD</option>
                                                 <option value="EUR">EUR</option>
                                             </select>
                                         </div>
+                                        <div class="form-group">
+                                            <select class="form-control currencytwo" name="type" required>
+                                                <option value="">Account type</option>
+                                                <option value="1">Cent Account</option>
+                                                <option value="2">Standard Account</option>
+                                                <option value="3">Premium Account</option>
+                                            </select>
+                                        </div>
                                         <input type="text" class="input" id="email" name="initial" placeholder="Initial Balance" required>
-                                        <input type="text" class="input" id="email" name="leverage" placeholder="Leverage" required>
-                                        <div class="check">
-                                            <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_2]" required>
-                                            <label for="accept">
-                                                <p>
-                                                    By clicking continue you agree to this <a href="https://bkfx.io/wp-content/uploads/2021/Iron-Campaign.pdf" target="_blank">Partners Agreement</a>
-                                                </p>
-                                            </label>
+                                        <div class="form-group">
+                                            <select class="form-control currencytwo" name="leverage" required>
+                                                <option value="">Leverage</option>
+                                                <option value="500">1:500</option>
+                                                <option value="400">1:400</option>
+                                                <option value="300">1:300</option>
+                                                <option value="200">1:200</option>
+                                                <option value="100">1:100</option>
+                                                <option value="50">1:50</option>
+                                                <option value="33">1:33</option>
+                                                <option value="10">1:10</option>
+                                                <option value="5">1:5</option>
+                                                <option value="2">1:2</option>
+                                                <option value="1">1:1</option>
+                                            </select>
                                         </div>
                                         <div class="check">
                                             <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_1]" required>
@@ -1279,7 +1287,7 @@
 
 <!--for responsive slid-->  
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
 <style>
         footer { padding: 25px 0; min-height: 100%; width: 100%; background: #F1F1F1}
         footer .m-container {width: 100%;max-width: 1200px;margin: 0 auto;padding: 0 15px;     display: flex; justify-content: space-between; }

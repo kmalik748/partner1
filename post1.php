@@ -12,11 +12,13 @@ $redirect = $_GET["redirect"];
 $currency = $_GET["currency"];
 $initial = $_GET["initial"];
 $leverage = $_GET["leverage"];
+$type = $_GET["type"];
 
 session_start();
 $refID = "";
 $pID = "";
 $lid = "";
+$groupName = "";
 if(isset($_SESSION["pid"])){
     $pID = $_SESSION["pid"];
 }
@@ -27,6 +29,24 @@ if(isset($_SESSION["lid"])){
 $body = "{\n\"firstName\": \"".$name."\",\n\"lastName\": \"".$name1."\",\n\"country\": \"".$country."\",\n\"phone\": \"".$phone."\",\n\"partnerId\": \"".$pID."\",\n\"referralLinkId\": \"".$lid."\",
     \n\"email\": \"".$email."\"}";
 
+if($type=="1" && $currency=="USD"){
+    $groupName = "demoBKFXCENTUSD";
+}
+if($type=="1" && $currency=="EUR"){
+    $groupName = "demoBKFXCENTEUR";
+}
+if($type=="2" && $currency=="USD"){
+    $groupName = "demoBKFXSTDUSD";
+}
+if($type=="2" && $currency=="EUR"){
+    $groupName = "demoBKFXSTDEUR";
+}
+if($type=="3" && $currency=="USD"){
+    $groupName = "demoBKFXPREUSD";
+}
+if($type=="3" && $currency=="EUR"){
+    $groupName = "demoBKFXPREEUR";
+}
 
 curl_setopt_array($curl, array(
     CURLOPT_URL => "https://secure.bkfx.io/rest/users/new?version=1.0.0",
@@ -60,7 +80,7 @@ if ($err) {
 
 
     if($response["id"]){
-        secondReq($response["id"], $leverage, $initial);
+        secondReq($response["id"], $leverage, $initial, $groupName);
         header("Location: ".$redirect."?success=true");
     }else{
         header("Location: ".$redirect."?success=false");
@@ -70,10 +90,10 @@ if ($err) {
 
 
 
-function secondReq($uid, $leverage, $initial){
+function secondReq($uid, $leverage, $initial, $groupName){
     $curl = curl_init();
 
-    $body = "{\n\"user\": \"".$uid."\",\n\"sid\": \"2\",\n\"groupName\": \"demoBKFXSTDUSD\",\n\"leverage\": \"".$leverage."\",\n\"initialBalance\": \"".$initial."\",
+    $body = "{\n\"user\": \"".$uid."\",\n\"sid\": \"2\",\n\"groupName\": \"".$groupName."\",\n\"leverage\": \"".$leverage."\",\n\"initialBalance\": \"".$initial."\",
     \n\"notifyDisable\": \"false\",\n\"readOnly\": \"false\"}";
 //    $body = "{\n\"user\": \"".$uid."\",\n\"sid\": \"2\",\n\"groupName\": \"demoBKFXSTDUSD\",\n\"leverage\": \"1500\",\n\"initialBalance\": \"1000\",
 //    \n\"notifyDisable\": \"false\",\n\"readOnly\": \"false\"}";
