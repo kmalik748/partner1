@@ -123,7 +123,7 @@ function secondReq($uid, $leverage, $initial, $groupName){
 
 //    $response = json_decode($response, true);
 //    echo $response; die(); exit();
-//    return $response;
+    return $response;
 
     curl_close($curl);
 }

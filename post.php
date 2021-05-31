@@ -53,9 +53,9 @@ curl_close($curl);
 if ($err) {
     echo "cURL Error #:" . $err;
 } else {
-    $response = json_decode($response, true);
+//    echo $response ;exit(); die();
 
-//    echo json_encode($response);exit(); die();
+    $response = json_decode($response, true);
 
     if($response["id"]){
         secondReq($response["id"]);
@@ -69,15 +69,15 @@ if ($err) {
 
 
 function secondReq($uid){
-    $curl = curl_init();
+    $curl1 = curl_init();
 
     $body = "{\n\"user\": \"".$uid."\",\n\"sid\": \"2\",\n\"groupName\": \"demoBKFXSTDUSD\",\n\"leverage\": \"500\",\n\"initialBalance\": \"1000\",
     \n\"notifyDisable\": \"false\",\n\"readOnly\": \"false\"}";
 
-//echo $body;
+//echo $body; exit(); die();
 
 
-    curl_setopt_array($curl, array(
+    curl_setopt_array($curl1, array(
         CURLOPT_URL => "https://secure.bkfx.io/rest/accounts/new?version=1.0.0",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => "",
@@ -95,13 +95,12 @@ function secondReq($uid){
         ),
     ));
 
-    $response = curl_exec($curl);
-    $err = curl_error($curl);
+    $response = curl_exec($curl1);
+    $err = curl_error($curl1);
+    curl_close($curl1);
 
-//    $response = json_decode($response, true);
-//    echo $response; die(); exit();
+//    echo $response; exit(); die();
 
     return $response;
 
-    curl_close($curl);
 }

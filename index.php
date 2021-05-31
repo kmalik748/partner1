@@ -145,7 +145,7 @@
                         <div class="tab-content">
                             <div id="home" class="tab-pane active">
                                 <div class="frm-bx">
-                                    <p style="font-style: italic; color: #11bcab;margin-bottom: 3px;justify-content: center;">* With the 'Quick' registration form you are opening a Standard USD Demo account with balance of USD1,000 and leverage 1:500</p>
+                                    <p style="font-style: italic; color: #11bcab;margin-bottom: 3px; text-align: justify">* With the 'Quick' registration form you are opening a Standard USD Demo account with balance of USD1,000 and leverage 1:500</p>
                                     <form action="post.php" method="get">
                                         <input type="hidden" name="redirect" value="index.php">
                                         <input type="text" class="input" name="step1[firstName]" id="firstname" placeholder="First Name" required>
