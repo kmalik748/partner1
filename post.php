@@ -99,7 +99,7 @@ function secondReq($uid){
     $err = curl_error($curl1);
     curl_close($curl1);
 
-//    echo $response; exit(); die();
+    echo $response; exit(); die();
 
     return $response;
 
