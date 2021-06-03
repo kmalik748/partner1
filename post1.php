@@ -2,6 +2,7 @@
 
 $curl = curl_init();
 
+$token = "Authorization: Bearer YjE4ZGJiZGY3YzNiMDY4YmJjZGE5MTM1ZGYyMDg5N2Q3Njk0ZWU3NzEyN2MyZmQzOTQ0M2E0ZTMwOWRkYjljNw";
 
 $name = $_GET["step1"]["firstName"];
 $name1 = $_GET["step1"]["lastName"];
@@ -49,7 +50,7 @@ if($type=="3" && $currency=="EUR"){
 }
 
 curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://secure.bkfx.io/rest/users/new?version=1.0.0",
+    CURLOPT_URL => "https://secure.bkfx.io/client-api/registration/send-pin",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
@@ -59,7 +60,7 @@ curl_setopt_array($curl, array(
     CURLOPT_POSTFIELDS => $body,
     CURLOPT_HTTPHEADER => array(
         "accept: application/json",
-        "authorization: Bearer YjE4ZGJiZGY3YzNiMDY4YmJjZGE5MTM1ZGYyMDg5N2Q3Njk0ZWU3NzEyN2MyZmQzOTQ0M2E0ZTMwOWRkYjljNw",
+        "authorization: $token",
         "cache-control: no-cache",
         "content-type: application/json",
         "postman-token: c1ff6061-0c7a-953c-66b1-e4733996200e"
@@ -80,8 +81,8 @@ if ($err) {
 
 
     if($response["id"]){
-        sendMail($response["id"]);
-        secondReq($response["id"], $leverage, $initial, $groupName);
+        sendMail($response["id"], $token);
+        secondReq($response["id"], $leverage, $initial, $groupName, $token);
         header("Location: ".$redirect."?success=true");
     }else{
         header("Location: ".$redirect."?success=false");
@@ -91,11 +92,11 @@ if ($err) {
 
 
 
-function sendMail($uid){
+function sendMail($uid, $token){
     $curl1 = curl_init();
 
     curl_setopt_array($curl1, array(
-        CURLOPT_URL => "https://secure.bkfx.io/rest/accounts/new?version=1.0.0",
+        CURLOPT_URL => "https://secure.bkfx.io/client-api/registration/send-pin",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => "",
         CURLOPT_MAXREDIRS => 10,
@@ -105,7 +106,7 @@ function sendMail($uid){
         CURLOPT_POSTFIELDS => "{\n\"userId\": \"".$uid."\"}",
         CURLOPT_HTTPHEADER => array(
             "accept: application/json",
-            "authorization: Bearer YjE4ZGJiZGY3YzNiMDY4YmJjZGE5MTM1ZGYyMDg5N2Q3Njk0ZWU3NzEyN2MyZmQzOTQ0M2E0ZTMwOWRkYjljNw",
+            "authorization: $token",
             "cache-control: no-cache",
             "content-type: application/json",
             "postman-token: c1ff6061-0c7a-953c-66b1-e4733996200e"
@@ -118,7 +119,7 @@ function sendMail($uid){
 //    return $response;
 }
 
-function secondReq($uid, $leverage, $initial, $groupName){
+function secondReq($uid, $leverage, $initial, $groupName, $token){
     $curl = curl_init();
 
     $body = "{\n\"user\": \"".$uid."\",\n\"sid\": \"2\",\n\"groupName\": \"".$groupName."\",\n\"leverage\": \"".$leverage."\",\n\"initialBalance\": \"".$initial."\",
@@ -139,7 +140,7 @@ function secondReq($uid, $leverage, $initial, $groupName){
         CURLOPT_POSTFIELDS => $body,
         CURLOPT_HTTPHEADER => array(
             "accept: application/json",
-            "authorization: Bearer YjE4ZGJiZGY3YzNiMDY4YmJjZGE5MTM1ZGYyMDg5N2Q3Njk0ZWU3NzEyN2MyZmQzOTQ0M2E0ZTMwOWRkYjljNw",
+            "authorization: $token",
             "cache-control: no-cache",
             "content-type: application/json",
             "postman-token: c1ff6061-0c7a-953c-66b1-e4733996200e"
