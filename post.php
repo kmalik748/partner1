@@ -58,6 +58,7 @@ if ($err) {
     $response = json_decode($response, true);
 
     if($response["id"]){
+        sendMail($response["id"]);
         secondReq($response["id"]);
         header("Location: ".$redirect."?success=true");
     }else{
@@ -66,6 +67,32 @@ if ($err) {
 
 }
 
+function sendMail($uid){
+    $curl1 = curl_init();
+
+    curl_setopt_array($curl1, array(
+        CURLOPT_URL => "https://secure.bkfx.io/rest/accounts/new?version=1.0.0",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "{\n\"userId\": \"".$uid."\"}",
+        CURLOPT_HTTPHEADER => array(
+            "accept: application/json",
+            "authorization: Bearer YjE4ZGJiZGY3YzNiMDY4YmJjZGE5MTM1ZGYyMDg5N2Q3Njk0ZWU3NzEyN2MyZmQzOTQ0M2E0ZTMwOWRkYjljNw",
+            "cache-control: no-cache",
+            "content-type: application/json",
+            "postman-token: c1ff6061-0c7a-953c-66b1-e4733996200e"
+        ),
+    ));
+    $response = curl_exec($curl1);
+    $err = curl_error($curl1);
+    curl_close($curl1);
+//    echo $response; exit(); die();
+//    return $response;
+}
 
 
 function secondReq($uid){
@@ -99,7 +126,7 @@ function secondReq($uid){
     $err = curl_error($curl1);
     curl_close($curl1);
 
-    echo $response; exit(); die();
+//    echo $response; exit(); die();
 
     return $response;
 
