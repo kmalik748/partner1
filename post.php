@@ -59,7 +59,7 @@ if ($err) {
     $response = json_decode($response, true);
 
     if($response["id"]){
-        sendMail($response["id"], $token);
+//        sendMail($response["id"], $token);
         secondReq($response["id"], $token);
         header("Location: ".$redirect."?success=true");
     }else{

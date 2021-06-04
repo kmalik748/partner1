@@ -81,7 +81,7 @@ if ($err) {
 
 
     if($response["id"]){
-        sendMail($response["id"], $token);
+//        sendMail($response["id"], $token);
         secondReq($response["id"], $leverage, $initial, $groupName, $token);
         header("Location: ".$redirect."?success=true");
     }else{
