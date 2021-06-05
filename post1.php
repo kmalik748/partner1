@@ -50,7 +50,7 @@ if($type=="3" && $currency=="EUR"){
 }
 
 curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://secure.bkfx.io/client-api/registration/send-pin",
+    CURLOPT_URL => "https://secure.bkfx.io/rest/users/new?version=1.0.0",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,

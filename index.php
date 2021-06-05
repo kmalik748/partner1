@@ -1,8 +1,8 @@
 <?php 
-//        define('WP_USE_THEMES', true);
-//        define('ICL_LANGUAGE_CODE', 'en');
-//        require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
-//        $sitepress->set_default_language('en');
+        define('WP_USE_THEMES', true);
+        define('ICL_LANGUAGE_CODE', 'en');
+        require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
+        $sitepress->set_default_language('en');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -1287,7 +1287,7 @@
 
 <!--for responsive slid-->  
 
-<?php //get_footer(); ?>
+<?php get_footer(); ?>
 <style>
         footer { padding: 25px 0; min-height: 100%; width: 100%; background: #F1F1F1}
         footer .m-container {width: 100%;max-width: 1200px;margin: 0 auto;padding: 0 15px;     display: flex; justify-content: space-between; }
