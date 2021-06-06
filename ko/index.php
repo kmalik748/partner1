@@ -126,7 +126,7 @@
 
 
                 <div class="form-flex">
-                    <h3>파트너 등록</h3>
+                    <h3>데모 계정 생성</h3>
                     <div class="tbs">
                         <ul class="nav nav-tabs">
 <!--                            <li class="nav-item">-->
@@ -135,8 +135,8 @@
 <!--                            <li class="nav-item">-->
 <!--                              <a class="nav-link" data-toggle="tab" href="#menu1">Corporate Client</a>-->
 <!--                            </li>-->
-                            <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#home">개별 고객</a></li>
-                            <li class="nav-item"><a  class="nav-link" data-toggle="tab" href="#menu1">법인 고객</a></li>
+                            <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#home">빨리</a></li>
+                            <li class="nav-item"><a  class="nav-link" data-toggle="tab" href="#menu1">커스텀</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="home" class="tab-pane active">
@@ -147,14 +147,6 @@
                                         <input type="hidden" name="step1[clientType]" value="Individual">
                                         <input type="text" class="input" name="step1[firstName]" placeholder="이름" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
                                         <input type="text" class="input" name="step1[lastName]" placeholder="성" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
-<!--                                        <input type="date" class="input" name="step1[birthDate]" placeholder="생일" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">-->
-                                        <div class='input-group date' id='datetimepicker3' style="margin-bottom: 10px;">
-                                            <input placeholder="생일" type='text' class="form-control input dateinput"
-                                                   name="step1[birthDate]" id="date_css"  required>
-                                            <span class="input-group-addon">
-                                               <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                        </div>
                                         <select class="form-group selectpicker countrypicker country_box dateinput select2 input"
                                                 data-live-search="true" data-flag="false" name="step1[country]" id="country1" required>
                                             <option value="">국가</option><option value="GH"  data-phone-prefix="+233">
@@ -660,21 +652,6 @@
                                         <input style="margin-top: 6px;" type="text" class="input" name="step1[phone]" id="phone1" placeholder="연락처" required  pattern="^[+][0-9]{5,}$" title="+ [국가 접두사 코드][다음에 전화 번호]" >
                                         <input type="email" class="input" name="step1[email]" placeholder="이메일" required>
                                         <br>
-                                        <div class="form-group">
-                                            <select class="form-control currencytwo" name="currency" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
-                                                <option value="">지갑 통화c</option>
-                                                <option value="USD">USD</option>
-                                                <option value="EUR">EUR</option>
-                                            </select>
-                                        </div>
-                                        <div class="check">
-                                            <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_2]" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
-                                            <label for="accept">
-                                                <p>
-                                                    계속을 클릭하면 이에 동의하는 것입니다  <a href="https://bkfx.io/wp-content/uploads/2021/Iron-Campaign-KO.pdf" target="_blank">파트너 계약</a>
-                                                </p>
-                                            </label>
-                                        </div>
                                         <div class="check">
                                             <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_1]" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
                                             <label for="accept">
@@ -694,8 +671,9 @@
                                         <input type="hidden" name="redirect" value="ko/index.php">
                                         <input type="hidden" name="IB" value="true">
                                         <input type="hidden" name="step1[clientType]" value="Corporate">
-                                        <input type="text" class="input" name="step1[firstName]" placeholder="회사 이름" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
 
+                                        <input type="text" class="input" name="step1[firstName]" placeholder="이름" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
+                                        <input type="text" class="input" name="step1[lastName]" placeholder="성" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
                                         <select class="form-group selectpicker countrypicker country_box dateinput select3 input"
                                                 data-live-search="true" data-flag="false" name="step1[country]" id="country2" required>
                                             <option value="">국가</option><option value="GH"  data-phone-prefix="+233">
@@ -1207,19 +1185,36 @@
                                         <input type="email" class="input" name="step1[email]" placeholder="이메일" required >
                                         <br>
                                         <div class="form-group">
+                                            <select class="form-control currencytwo" name="type" required>
+                                                <option value="">계정 유형</option>
+                                                <option value="1">센트 계정</option>
+                                                <option value="2">표준 계정</option>
+                                                <option value="3">프리미엄 계정</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
                                             <select class="form-control currencytwo" name="currency" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
                                                 <option value="">지갑 통화c</option>
                                                 <option value="USD">USD</option>
                                                 <option value="EUR">EUR</option>
                                             </select>
                                         </div>
-                                        <div class="check">
-                                            <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_2]" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
-                                            <label for="accept">
-                                                <p>
-                                                    계속을 클릭하면 이에 동의하는 것입니다  <a href="https://bkfx.io/wp-content/uploads/2021/Iron-Campaign-KO.pdf" target="_blank">파트너 계약</a>
-                                                </p>
-                                            </label>
+                                        <input type="text" class="input" id="email" name="initial" placeholder="초기 잔액" required>
+                                        <div class="form-group">
+                                            <select class="form-control currencytwo" name="leverage" required>
+                                                <option value="">이점</option>
+                                                <option value="500">1:500</option>
+                                                <option value="400">1:400</option>
+                                                <option value="300">1:300</option>
+                                                <option value="200">1:200</option>
+                                                <option value="100">1:100</option>
+                                                <option value="50">1:50</option>
+                                                <option value="33">1:33</option>
+                                                <option value="10">1:10</option>
+                                                <option value="5">1:5</option>
+                                                <option value="2">1:2</option>
+                                                <option value="1">1:1</option>
+                                            </select>
                                         </div>
                                         <div class="check">
                                             <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_1]" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">

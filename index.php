@@ -78,17 +78,17 @@
                     <div class="float-left" style="display: inline-block">
                         <a class="logo" href="https://bkfx.io"><img src="images/bkfx_logo.svg" class="logo-pic img-fluid" alt=""></a>
                     </div>
-<!--                    <div class="float-right" style="display: inline-block; float: right; margin: 26px 108px 0px 0px !important;">-->
-<!--                        <div class="dropdown">-->
-<!--                            <a href="#" class="lan dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span>EN</span></a>-->
-<!--                            <ul class="dropdown-menu">-->
-<!--                                <li><a href="index.php"><img src="https://secure.bkfx.io/images/flags/gb.png">English</a></li>-->
-<!--                                <li><a href="es"><img src="https://secure.bkfx.io/images/flags/es.png">Español</a></li>-->
-<!--                                <li><a href="pt"><img src="https://secure.bkfx.io/images/flags/pt.png">Português</a></li>-->
-<!--                                <li><a href="ko"><img src="https://secure.bkfx.io/images/flags/ko.png">한국어</a></li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="float-right" style="display: inline-block; float: right; margin: 26px 108px 0px 0px !important;">
+                        <div class="dropdown">
+                            <a href="#" class="lan dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span>EN</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.php"><img src="https://secure.bkfx.io/images/flags/gb.png">English</a></li>
+                                <li><a href="es"><img src="https://secure.bkfx.io/images/flags/es.png">Español</a></li>
+                                <li><a href="pt"><img src="https://secure.bkfx.io/images/flags/pt.png">Português</a></li>
+                                <li><a href="ko"><img src="https://secure.bkfx.io/images/flags/ko.png">한국어</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="btn-group">

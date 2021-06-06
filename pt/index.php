@@ -123,7 +123,7 @@
                 ?>
 
                 <div class="form-flex">
-                    <h3>Cadastro de Parceiros</h3>
+                    <h3>Criação de conta de demonstração</h3>
                     <div class="tbs">
                         <ul class="nav nav-tabs">
 <!--                            <li class="nav-item">-->
@@ -132,8 +132,8 @@
 <!--                            <li class="nav-item">-->
 <!--                              <a class="nav-link" data-toggle="tab" href="#menu1">Corporate Client</a>-->
 <!--                            </li>-->
-                            <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#home">Individual</a></li>
-                            <li class="nav-item"><a  class="nav-link" data-toggle="tab" href="#menu1">Corporativo</a></li>
+                            <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#home">Rápida</a></li>
+                            <li class="nav-item"><a  class="nav-link" data-toggle="tab" href="#menu1">Personalizada</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="home" class="tab-pane active">
@@ -145,13 +145,7 @@
                                         <input type="text" class="input" name="step1[firstName]" placeholder="Primeiro nome" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
                                         <input type="text" class="input" name="step1[lastName]" placeholder="Último nome" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
 <!--                                        <input type="date" class="input" name="step1[birthDate]" placeholder="Data de nascimento" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">-->
-                                        <div class='input-group date' id='datetimepicker3' style="margin-bottom: 10px;">
-                                            <input placeholder="Data de nascimento" type='text' class="form-control input dateinput"
-                                                   name="step1[birthDate]" id="date_css"  required>
-                                            <span class="input-group-addon">
-                                               <span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                        </div>
+
                                         <select class="form-group selectpicker countrypicker country_box dateinput select2 input"
                                                 data-live-search="true" data-flag="false" name="step1[country]" id="country1" required>
                                             <option value="">País</option><option value="AF"  data-phone-prefix="+93">
@@ -660,21 +654,6 @@
 <!--                                                data-live-search="true" data-default="South Africa"-->
 <!--                                                data-flag="false" name="step1[country]">-->
 <!--                                        </select>-->
-                                        <div class="form-group">
-                                            <select class="form-control currencytwo" name="currency" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
-                                                <option value="">Moeda da carteira</option>
-                                                <option value="USD">USD</option>
-                                                <option value="EUR">EUR</option>
-                                            </select>
-                                        </div>
-                                        <div class="check">
-                                            <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_2]" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
-                                            <label for="accept">
-                                                <p>
-                                                    Ao clicar em continuar, você concorda com este  <a href="https://bkfx.io/wp-content/uploads/2021/Iron-Campaign-PT.pdf" target="_blank">Acordo de Parceiros</a>
-                                                </p>
-                                            </label>
-                                        </div>
                                         <div class="check">
                                             <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_1]" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
                                             <label for="accept">
@@ -683,14 +662,6 @@
                                                 </p>
                                             </label>
                                         </div>
-<!--                                        <div class="check">-->
-<!--                                            <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_1]" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">-->
-<!--                                            <label for="step1_document_group_1" class="required">-->
-<!--                                                <p>-->
-<!--                                                    Eu aceito <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/345059260f04cf56551bdd2de2628c5d.pdf" target="_blank">Política de Divulgação de Risco</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/6e0ab02c919cd776f26af10d824b8d8a.pdf" target="_blank">Política de Privacidade</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/3146cd0fc09311440db2981876faa060.pdf" target="_blank">Politica de reembolso</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/382fd562b25f03ac216f91c559331b35.pdf" target="_blank">Política de Margem</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/23a5cd59afa5c354c71a60895b5f895a.pdf" target="_blank">Política KYC</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/987a4823f630f67888a5248b563fded0.pdf" target="_blank">Política de fundos do cliente</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/d5637a99b4a26803e0b1ebb45581644b.pdf" target="_blank">Política de Execução de Pedidos</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/8eaba58ccda7d3d8760fa1e17956bdd4.pdf" target="_blank">Política de conflito de interesses</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/e89cb72a7c87eab03b5aa637ee53e4f2.pdf" target="_blank">Política de Reclamações</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/9e710e3ad27376f8796db8d51ff29268.pdf" target="_blank">Contrato por Diferença</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/89aa6e333a9e2136f58b593bf902bf3d.pdf" target="_blank">Política AML</a>, <a href="https://secure.bkfx.io/uploads/public/company-documents/2021/01/16/dd79ceb59e7c67a1508c64ad182b8655.pdf" target="_blank">Termos e Condições de Uso</a>-->
-<!--                                                </p>-->
-<!--                                            </label>-->
-<!--                                        </div>-->
                                         <input class="btnNew" type="submit" name="submit_1" value="Continuar">
                                     </form>
                                 </div>
@@ -702,8 +673,8 @@
                                         <input type="hidden" name="redirect" value="pt/index.php">
                                         <input type="hidden" name="IB" value="true">
                                         <input type="hidden" name="step1[clientType]" value="Corporate">
-                                        <input type="text" class="input" name="step1[firstName]" placeholder="Nome da empresa" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
-
+                                        <input type="text" class="input" name="step1[firstName]" placeholder="Primeiro nome" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
+                                        <input type="text" class="input" name="step1[lastName]" placeholder="Último nome" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
                                         <select class="form-group selectpicker countrypicker country_box dateinput select3 input"
                                                 data-live-search="true" data-flag="false" name="step1[country]" id="country2" required>
                                             <option value="">País</option><option value="AF"  data-phone-prefix="+93">
@@ -1210,19 +1181,37 @@
                                         <input type="email" class="input" name="step1[email]" placeholder="Email" required>
                                         <br>
                                         <div class="form-group">
+                                            <select class="form-control currencytwo" name="type" required>
+                                                <option value="">Tipo de conta</option>
+                                                <option value="1">Conta Cent</option>
+                                                <option value="2">Conta Padrão</option>
+                                                <option value="3">Conta Premium</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
                                             <select class="form-control currencytwo" name="currency" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
                                                 <option value="">Moeda da carteira</option>
                                                 <option value="USD">USD</option>
                                                 <option value="EUR">EUR</option>
                                             </select>
                                         </div>
-                                        <div class="check">
-                                            <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_2]" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
-                                            <label for="accept">
-                                                <p>
-                                                    Ao clicar em continuar, você concorda com este  <a href="https://bkfx.io/wp-content/uploads/2021/Iron-Campaign-PT.pdf" target="_blank">Acordo de Parceiros</a>
-                                                </p>
-                                            </label>
+
+                                        <input type="text" class="input" id="email" name="initial" placeholder="Balanço inicial" required>
+                                        <div class="form-group">
+                                            <select class="form-control currencytwo" name="leverage" required>
+                                                <option value="">Aproveitar</option>
+                                                <option value="500">1:500</option>
+                                                <option value="400">1:400</option>
+                                                <option value="300">1:300</option>
+                                                <option value="200">1:200</option>
+                                                <option value="100">1:100</option>
+                                                <option value="50">1:50</option>
+                                                <option value="33">1:33</option>
+                                                <option value="10">1:10</option>
+                                                <option value="5">1:5</option>
+                                                <option value="2">1:2</option>
+                                                <option value="1">1:1</option>
+                                            </select>
                                         </div>
                                         <div class="check">
                                             <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_1]" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
