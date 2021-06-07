@@ -141,6 +141,7 @@
                         <div class="tab-content">
                             <div id="home" class="tab-pane active">
                                 <div class="frm-bx">
+                                    <p style="font-style: italic; color: #11bcab;margin-bottom: 3px; text-align: justify">* 빠른'등록 양식을 사용하면 잔액이 1,000 달러이고 레버리지가 1:500 인 표준 USD 데모 계정을 개설하게됩니다</p>
                                     <form method="get" action="../post.php">
                                         <input type="hidden" name="redirect" value="ko/index.php">
                                         <input type="hidden" name="IB" value="true">
@@ -650,7 +651,7 @@
                                             </option>
                                         </select>
                                         <input style="margin-top: 6px;" type="text" class="input" name="step1[phone]" id="phone1" placeholder="연락처" required  pattern="^[+][0-9]{5,}$" title="+ [국가 접두사 코드][다음에 전화 번호]" >
-                                        <input type="email" class="input" name="step1[email]" placeholder="이메일" required>
+                                        <input type="email" class="input" name="step1[email]" placeholder="이메일" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
                                         <br>
                                         <div class="check">
                                             <input class="chkbx" type="checkbox" id="accept" name="step1[document_group_1]" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
@@ -1182,11 +1183,11 @@
 <!--                                            <input id="phone" type="text" class="form-control input" name="step1[phone]"-->
 <!--                                                   placeholder="연락처" style="padding-left: 10px;" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">-->
 <!--                                        </div>-->
-                                        <input type="email" class="input" name="step1[email]" placeholder="이메일" required >
+                                        <input type="email" class="input" name="step1[email]" placeholder="이메일" required oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
                                         <br>
                                         <div class="form-group">
-                                            <select class="form-control currencytwo" name="type" required>
-                                                <option value="">계정 유형</option>
+                                            <select class="form-control currencytwo" name="type" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
+                                                <option value="">계정 통화</option>
                                                 <option value="1">센트 계정</option>
                                                 <option value="2">표준 계정</option>
                                                 <option value="3">프리미엄 계정</option>
@@ -1199,10 +1200,10 @@
                                                 <option value="EUR">EUR</option>
                                             </select>
                                         </div>
-                                        <input type="text" class="input" id="email" name="initial" placeholder="초기 잔액" required>
+                                        <input type="number" class="input" id="email" name="initial" placeholder="초기 잔액" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
                                         <div class="form-group">
-                                            <select class="form-control currencytwo" name="leverage" required>
-                                                <option value="">이점</option>
+                                            <select class="form-control currencytwo" name="leverage" required  oninvalid="this.setCustomValidity('이 필드를 입력하십시오')" oninput="setCustomValidity('')">
+                                                <option value="">최대 레버리지</option>
                                                 <option value="500">1:500</option>
                                                 <option value="400">1:400</option>
                                                 <option value="300">1:300</option>

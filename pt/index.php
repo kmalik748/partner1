@@ -132,12 +132,13 @@
 <!--                            <li class="nav-item">-->
 <!--                              <a class="nav-link" data-toggle="tab" href="#menu1">Corporate Client</a>-->
 <!--                            </li>-->
-                            <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#home">Rápida</a></li>
-                            <li class="nav-item"><a  class="nav-link" data-toggle="tab" href="#menu1">Personalizada</a></li>
+                            <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#home">Rápido</a></li>
+                            <li class="nav-item"><a  class="nav-link" data-toggle="tab" href="#menu1">Personalizado</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="home" class="tab-pane active">
                                 <div class="frm-bx">
+                                    <p style="font-style: italic; color: #11bcab;margin-bottom: 3px; text-align: justify">* Com o formulário de registro 'Rápido' você está abrindo uma conta Demo em USD padrão com saldo de US $ 1.000 e alavancagem de 1:500</p>
                                     <form method="get" action="../post.php">
                                         <input type="hidden" name="redirect" value="pt/index.php">
                                         <input type="hidden" name="IB" value="true">
@@ -649,7 +650,7 @@
                                             </option>
                                         </select>
                                         <input pattern="^[+][0-9]{5,}$" title="+[código do prefixo do país][seguido pelo número do telefone]" style="margin-top: 6px;" type="text" class="input" name="step1[phone]" id="phone1" placeholder="Número de telefone" required>
-                                        <input type="email" class="input" name="step1[email]" placeholder="Email" required>
+                                        <input type="email" class="input" name="step1[email]" placeholder="Email" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
 <!--                                        <select class="form-group selectpicker countrypicker country_box dateinput"-->
 <!--                                                data-live-search="true" data-default="South Africa"-->
 <!--                                                data-flag="false" name="step1[country]">-->
@@ -1181,7 +1182,7 @@
                                         <input type="email" class="input" name="step1[email]" placeholder="Email" required>
                                         <br>
                                         <div class="form-group">
-                                            <select class="form-control currencytwo" name="type" required>
+                                            <select class="form-control currencytwo" name="type" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
                                                 <option value="">Tipo de conta</option>
                                                 <option value="1">Conta Cent</option>
                                                 <option value="2">Conta Padrão</option>
@@ -1190,16 +1191,16 @@
                                         </div>
                                         <div class="form-group">
                                             <select class="form-control currencytwo" name="currency" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
-                                                <option value="">Moeda da carteira</option>
+                                                <option value="">Moeda da conta</option>
                                                 <option value="USD">USD</option>
                                                 <option value="EUR">EUR</option>
                                             </select>
                                         </div>
 
-                                        <input type="text" class="input" id="email" name="initial" placeholder="Balanço inicial" required>
+                                        <input type="number" class="input" id="email" name="initial" placeholder="Balanço inicial" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
                                         <div class="form-group">
-                                            <select class="form-control currencytwo" name="leverage" required>
-                                                <option value="">Aproveitar</option>
+                                            <select class="form-control currencytwo" name="leverage" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
+                                                <option value="">Alavancagem</option>
                                                 <option value="500">1:500</option>
                                                 <option value="400">1:400</option>
                                                 <option value="300">1:300</option>

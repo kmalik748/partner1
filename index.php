@@ -1192,7 +1192,7 @@
                                                 <option value="EUR">EUR</option>
                                             </select>
                                         </div>
-                                        <input type="text" class="input" id="email" name="initial" placeholder="Initial Balance" required>
+                                        <input type="number" class="input" id="email" name="initial" placeholder="Initial Balance" required>
                                         <div class="form-group">
                                             <select class="form-control currencytwo" name="leverage" required>
                                                 <option value="">Leverage</option>
