@@ -1179,7 +1179,7 @@
                                             </option>
                                         </select>
                                         <input pattern="^[+][0-9]{5,}$" title="+[código do prefixo do país][seguido pelo número do telefone]" style="margin-top: 6px;" type="text" class="input" name="step1[phone]" id="phone2" placeholder="Número de telefone" required>
-                                        <input type="email" class="input" name="step1[email]" placeholder="Email" required>
+                                        <input type="email" class="input" name="step1[email]" placeholder="Email" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
                                         <br>
                                         <div class="form-group">
                                             <select class="form-control currencytwo" name="type" required  oninvalid="this.setCustomValidity('Por favor, preencha este campo')" oninput="setCustomValidity('')">
